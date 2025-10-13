@@ -34,24 +34,24 @@ function showClues(n){
 }
 
 async function fetchServerTime(){
-  const tz = encodeURIComponent(TIMEZONE);
-  const endpoints = [
-    `https://worldtimeapi.org/api/timezone/${tz}`,
-    `https://timeapi.io/api/Time/current/zone?timeZone=${tz}`
-  ];
-  for(const url of endpoints){
-    try{
-    	const res = await fetch(url,{cache:'no-store'});
-		if(!res.ok) throw new Error('No OK');
-		const j = await res.json();
-		if(j.utc_datetime) return new Date(j.utc_datetime);
-		if(j.dateTime) return new Date(j.dateTime);
-    }catch(e){
-      // intenta siguiente
-    }
-  }
-  // fallback a hora local (menos seguro)
-  return new Date();
+	const tz = encodeURIComponent(TIMEZONE);
+	const endpoints = [
+		`https://worldtimeapi.org/api/timezone/${tz}`,
+		`https://timeapi.io/api/Time/current/zone?timeZone=${tz}`
+	];
+	for(const url of endpoints){
+		try{
+			const res = await fetch(url,{cache:'no-store'});
+			if(!res.ok) throw new Error('No OK');
+			const j = await res.json();
+			if(j.utc_datetime) return new Date(j.utc_datetime);
+			if(j.dateTime) return new Date(j.dateTime);
+		}catch(e){
+			// intenta siguiente
+		}
+	}
+	// fallback a hora local (menos seguro)
+	return new Date();
 }
 
 (async function main(){
