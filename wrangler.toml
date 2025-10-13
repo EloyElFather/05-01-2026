@@ -1,5 +1,0 @@
-name = "regalo-andorra-worker"
-type = "javascript"
-account_id = ""
-workers_dev = true
-compatibility_date = "2025-01-01"
