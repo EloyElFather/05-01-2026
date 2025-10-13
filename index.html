@@ -1,34 +1,40 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Regalo sorpresa</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Regalo sorpresa</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card" id="app">
-    <section id="before">
-      <h1>¡Pronto podrás abrir tu regalo!</h1>
-      <p class="big">Fecha del regalo: <strong id="targetStr"></strong></p>
-      <p>Estamos comprobando la hora real del servidor...</p>
-      <p id="status">Consultando servidor de tiempo...</p>
-      <div class="hint">Pistas disponibles: <span id="cluesCount">0</span></div>
-      <ol id="cluesList"></ol>
-    </section>
+	<main class="card" id="app">
+		<!-- <section id="before">
+			<h1>¡Pronto podrás abrir tu regalo!</h1>
+			<p class="big">Fecha del regalo: <strong id="targetStr"></strong></p>
+			<p>Estamos comprobando la hora real del servidor...</p>
+			<p id="status">Consultando servidor de tiempo...</p>
+			<div class="hint">Pistas disponibles: <span id="cluesCount">0</span></div>
+			<ol id="cluesList"></ol>
+		</section> -->
+		<section id="before">
+			<h1>???</h1>
+			<p id="status">Consultando servidor de tiempo...</p>
+			<div class="hint">Pistas disponibles: <span id="cluesCount">0</span></div>
+			<ol id="cluesList"></ol>
+		</section>
 
-    <section id="after" class="hidden">
-      <h1>¡Feliz cumpleaños!</h1>
-      <p class="big">Tu sorpresa está aquí:</p>
-      <div class="wrap">✨ Una noche en Andorra — Hotel reservado. ✨</div>
-      <p style="margin-top:1rem">Detalles y voucher (protegido): <a id="voucherLink" href="#" target="_blank">Abrir voucher</a></p>
-    </section>
+		<section id="after" class="hidden">
+			<h1>¡Feliz cumpleaños!</h1>
+			<p class="big">Tu sorpresa está aquí:</p>
+			<div class="wrap">✨ Una noche en Andorra — Hotel reservado. ✨</div>
+			<p style="margin-top:1rem">Detalles y voucher (protegido): <a id="voucherLink" href="#" target="_blank">Abrir voucher</a></p>
+		</section>
 
-    <section id="error" class="hidden">
-      <h2>Error</h2>
-      <p id="errMsg"></p>
-    </section>
-  </main>
-  <script src="script.js"></script>
+		<section id="error" class="hidden">
+			<h2>Error</h2>
+			<p id="errMsg"></p>
+		</section>
+	</main>
+  	<script src="script.js"></script>
 </body>
 </html>
