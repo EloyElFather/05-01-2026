@@ -57,7 +57,7 @@ async function fetchServerTime(){
 (async function main(){
 	try{
 		const serverDate = await fetchServerTime();
-		statusEl.textContent = 'Hora del servidor: ' + serverDate.toLocaleString();
+		//statusEl.textContent = 'Hora del servidor: ' + serverDate.toLocaleString();
 		const target = new Date(TARGET_ISO);
 		const secondsDiff = Math.round((target - serverDate)/1000);
 
@@ -70,7 +70,7 @@ async function fetchServerTime(){
 			showClues(CLUES.length);
 		} else {
 			const minutes = Math.floor(secondsDiff/60);
-			statusEl.textContent += ` — Falta ${minutes} minutos (${secondsDiff} s).`;
+			statusEl.textContent = ` — Faltan ${minutes} minutos (${secondsDiff} s) para la primera pista...`;
 			// si queda menos de 48h, muestra 1 pista; si menos 12h muestra 2; si menos 1h muestra todas
 			if(secondsDiff <= 3600) showClues(CLUES.length);
 			else if(secondsDiff <= 12*3600) showClues(2);
