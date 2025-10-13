@@ -1,5 +1,5 @@
 // CONFIG: Cambia esta fecha objetivo (en UTC) al valor deseado
-const TARGET_ISO = '2025-01-05T10:00:00Z'; // <-- ajusta aquí
+const TARGET_ISO = '2026-01-05T10:00:00Z'; // <-- ajusta aquí
 const TIMEZONE = 'Europe/Madrid'; // para petición a la API de tiempo
 const CLUES = [
 	'Empieza por preparar ropa cómoda para la montaña.',
