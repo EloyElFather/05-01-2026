@@ -1,12 +1,114 @@
-:root{--bg:#f3f4f6;--card:#fff;--accent:#0b67ff}
-*{box-sizing:border-box}
-body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-.card{background:var(--card);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.08);width:min(820px,96vw)}
-h1{margin:0 0 8px;font-size:1.4rem}
-.big{font-size:1.05rem;margin-bottom:6px}
-.hidden{display:none}
-.wrap{font-weight:700;color:var(--accent);font-size:1.05rem}
-#status{color:#444}
-.hint{margin-top:8px;color:#666}
-ol{margin-top:12px}
-#voucherLink{font-weight:600}
+:root {
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --accent: #0b67ff;
+  --text: #333;
+  --text-light: #666;
+  --shadow: rgba(2, 6, 23, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial;
+  background: var(--bg);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+/* Tarjeta principal */
+.card {
+  background: var(--card);
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px var(--shadow);
+  width: min(820px, 96vw);
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Títulos */
+h1 {
+  margin: 0 0 14px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Texto grande */
+.big {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Oculto genérico */
+.hidden {
+  display: none;
+}
+
+/* Mensaje en azul */
+.wrap {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Estado que va cambiando */
+#status {
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Indicador de pistas */
+.hint {
+  margin-top: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Listado de pistas */
+ol {
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  background: #f8f9fb;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Enlace del voucher */
+#voucherLink {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#voucherLink:hover {
+  text-decoration: underline;
+}
