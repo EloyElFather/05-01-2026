@@ -1,62 +1,61 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Regalo NAVIDAD/CUMPLEAÑOS</title>
-  <meta name="description" content="Una pequeña cuenta atrás con pistas para descubrir qué te espera...">
-  <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>???</title>
+	<meta name="description" content="Una pequeña cuenta atrás con pistas para descubrir qué te espera...">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="card" id="app">
-    <!-- Estado antes de la fecha del regalo -->
-    <section id="before">
-      <h1>???</h1>
+	<main class="card" id="app">
+	<!-- Estado antes de la fecha del regalo -->
+	<section id="before">
+		<h1>???</h1>
 
-      <!-- La fecha está oculta para que no “cante”, pero el JS puede seguir rellenándola -->
-      <p hidden class="big">
-        Fecha del regalo: <strong id="targetStr"></strong>
-      </p>
+		<!-- La fecha está oculta para que no “cante”, pero el JS puede seguir rellenándola -->
+		<p hidden class="big">
+		Fecha del regalo: <strong id="targetStr"></strong>
+		</p>
 
-      <!-- Texto que irá cambiando según el tiempo que falte -->
-      <p id="status" aria-live="polite">Consultando servidor de tiempo...</p>
+		<!-- Texto que irá cambiando según el tiempo que falte -->
+		<p id="status" aria-live="polite">Consultando servidor de tiempo...</p>
 
-      <p>Pronto recibirás alguna pista... Paciencia, xixi Gómez ❤️</p>
+		<p>Pronto recibirás alguna pista... Paciencia, xixi Gómez ❤️</p>
 
-      <div class="hint">
-        Pistas disponibles: <span id="cluesCount">0</span>
-      </div>
-      <ol id="cluesList"></ol>
-    </section>
+		<div class="hint">
+		Pistas disponibles: <span id="cluesCount">0</span>
+		</div>
+		<ol id="cluesList"></ol>
+	</section>
 
-    <!-- Estado después de la fecha del regalo -->
-    <section id="after" class="hidden">
-      <h1>¡Feliz cumpleaños! 🎂</h1>
-      <p class="big">Tu sorpresa está aquí:</p>
+	<!-- Estado después de la fecha del regalo -->
+	<section id="after" class="hidden">
+		<h1>¡Feliz cumpleaños! 🎂</h1>
+		<p class="big">Tu sorpresa está aquí:</p>
 
-      <div class="wrap">
-        ✨ Un pack de mimos para ti:
-        <ul>
-          <li>Un tocadiscos retro para llenar la casa de música.</li>
-          <li>Un lote Rituals of Sakura (tamaño L) para que te mimes muchísimo.</li>
-          <li>Un jersey o pijama que elegirás tú, para estar calentita y cómoda.</li>
-        </ul>
-        ✨
-      </div>
+		<div class="wrap">
+		✨ Un pack de mimos para ti:
+		<ul>
+			<li>Un tocadiscos retro para llenar la casa de música.</li>
+			<li>Un lote Rituals of Sakura (tamaño L) para que te mimes muchísimo.</li>
+			<li>Un jersey o pijama que elegirás tú, para estar calentita y cómoda.</li>
+		</ul>
+		✨
+		</div>
 
-      <p style="margin-top:1rem">
-        Detalles del regalo (carta / voucher):<br>
-        <a id="voucherLink" href="#" target="_blank" rel="noopener noreferrer">Abrir sorpresa</a>
-      </p>
-    </section>
+		<p style="margin-top:1rem">
+		Detalles del regalo (carta / voucher):<br>
+		<a id="voucherLink" href="#" target="_blank" rel="noopener noreferrer">Abrir sorpresa</a>
+		</p>
+	</section>
 
-    <!-- Estado de error si algo va muy mal -->
-    <section id="error" class="hidden">
-      <h2>Ups, algo ha fallado</h2>
-      <p id="errMsg"></p>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+		<!-- Estado de error si algo va muy mal -->
+		<section id="error" class="hidden">
+			<h2>Ups, algo ha fallado</h2>
+			<p id="errMsg"></p>
+		</section>
+	</main>
+	<script src="script.js"></script>
 </body>
 </html>
